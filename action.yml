@@ -1,5 +1,5 @@
 name: 'Expect labels on PR'
-author: 'Alexnader Bocharov'
+author: 'Alexander Bocharov'
 description: 'Check that specific labels are present on Pull Request and assign default one if not.'
 branding:
   icon: 'tag'

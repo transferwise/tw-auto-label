@@ -6,7 +6,6 @@ import sys
 
 from github import Github
 
-DEFAULT_LABEL = 'change:standard'
 valid_labels = set(['change:standard', 'change:impactful', 'change:emergency'])
 
 repo_name = os.environ.get('GITHUB_REPOSITORY')
@@ -23,5 +22,5 @@ if (valid_labels & found_labels):
     exit(0)
 else:
     print("Missing required label from PR! Adding the default ones", valid_labels)
-    pr.add_to_labels(self.DEFAULT_LABEL)
+    pr.add_to_labels('change:standard')
     exit(0)
