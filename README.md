@@ -1,6 +1,7 @@
 # Check labels in PR
 
 Checks that one of the following labels is present on the pull request: `change: standard`, `change:emergency`, `change:impactful`.
+If not the action automatically assigns `change: standard`
 
 ## Setup
 
@@ -15,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: erdostw/tw-check-label@v1.0.0
+    - uses: transferwise/tw-check-label@1.0.1
       with:
         github-token: '${{ secrets.GITHUB_TOKEN }}'
 ```
